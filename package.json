@@ -1,5 +1,5 @@
 {
-  "name": "gul",
+  "name": "simplefood",
   "version": "1.0.0",
   "description": "assembly of gulp",
   "main": "index.html",
@@ -19,5 +19,13 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
     "sass": "^1.50.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toronto2022/SimpleFood.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Toronto2022/SimpleFood/issues"
+  },
+  "homepage": "https://github.com/Toronto2022/SimpleFood#readme"
 }
