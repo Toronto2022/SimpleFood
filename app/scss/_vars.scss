@@ -3,22 +3,18 @@ $orange:#FF6838;
 $dark :#31352B;
 $gray:#C2C2C2;
 $white:#fff;
+$dark-d:#000;
 $darkBlue: #363853;
+$light-orange:#FF7A50;
 
-%rubik-300 {
-  font-family: 'Rubik-Light',
-    sans-serif;
-  font-weight: 300;
+%bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-%rubik-400 {
-  font-family: 'Rubik-Regular',
-    sans-serif;
-  font-weight: 400;
-}
-
-%rubik-600 {
-  font-family: 'Rubik-Medium',
-    sans-serif;
-  font-weight: 600;
+%fl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
