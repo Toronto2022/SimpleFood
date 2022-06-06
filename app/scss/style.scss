@@ -1,5 +1,6 @@
 @import 'fonts';
 @import 'vars';
+@import 'mixins';
 @import 'global';
 @import 'libs';
 
@@ -35,7 +36,7 @@
   &__list {
     display: flex;
     margin-left: auto;
-    margin-right: 63px;
+    margin-right: 45px;
   }
 
   &__item {
@@ -61,7 +62,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 35px;
+      margin-right: 18px;
     }
   }
 
@@ -74,6 +75,14 @@
     border-radius: 5px;
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, stroke 0.5s;
 
+    svg {
+      width: 21px;
+      height: 22px;
+      fill-opacity: 0;
+      stroke: $darkBlue;
+      stroke-width: 1.5px;
+    }
+
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
       box-shadow: 0 0 0 2px rgba($orange, 0.7);
@@ -82,11 +91,7 @@
     &:hover {
       background-color: $light-orange;
 
-      svg path {
-        stroke: $white;
-      }
-
-      svg ellipse {
+      svg {
         stroke: $white;
       }
     }
@@ -138,7 +143,6 @@
     line-height: 1.3;
     text-transform: uppercase;
     color: $darkBlue;
-    margin-bottom: 20px;
   }
 
   &__time {
@@ -147,12 +151,13 @@
   }
 
   &__text {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    @include line-clamp(3);
   }
 
   &__btn {
     padding: 12px 32px;
-    margin-right: 34px;
+    margin-right: 23px;
   }
 
   &__link {
@@ -179,7 +184,7 @@
     background-color: $orange;
     color: $white;
 
-    svg path {
+    svg {
       fill: $white;
     }
   }
@@ -206,6 +211,14 @@
     border-radius: 5px;
     transition: box-shadow 0.5s, color 0.5s, background-color 0.5s, fill 0.5s;
 
+    svg {
+      position: absolute;
+      top: 15px;
+      left: 35px;
+      width: 44px;
+      height: 44px;
+    }
+
     &:focus {
       box-shadow: 0 0 0 2px rgba($orange, 0.7);
     }
@@ -215,7 +228,7 @@
       box-shadow: 0 0 0 2px rgba($orange, 0.7);
       background-color: rgba(255, 122, 80, 0.1);
 
-      svg path {
+      svg {
         fill: $orange;
       }
     }
@@ -225,16 +238,10 @@
       background-color: $white;
       box-shadow: inset 0 -5px 12px rgba(255, 104, 56, 0.2);
 
-      svg path {
+      svg {
         fill: $darkBlue;
       }
     }
-  }
-
-  &__btn svg {
-    position: absolute;
-    top: 15px;
-    left: 25px;
   }
 
   &__title {
@@ -263,10 +270,65 @@
   }
 }
 
+.burgers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -30px 30px 0;
+
+  &__item {
+    max-width: 210px;
+    width: 100%;
+    margin: 0 30px 30px 0;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 210px;
+  height: 100%;
+  background-color: $white;
+  padding: 20px 15px;
+  text-align: center;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $orange;
+  }
+
+
+  &__img {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $darkBlue;
+    margin: auto 0 7px 0;
+  }
+
+  &__btn {
+    font-size: 14px;
+    padding: 7px 16px;
+  }
+}
+
 .delivery {
   &__main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -286,6 +348,7 @@
 
   &__text {
     margin-bottom: 30px;
+    @include line-clamp(3);
   }
 
   &__items {
@@ -306,7 +369,6 @@
       top: 4px;
       left: 0;
       @extend %bg;
-
     }
 
     &--fast-del {
@@ -341,18 +403,6 @@
   }
 }
 
-
-.burgers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -30px 30px 0;
-
-  &__item {
-    margin: 0 30px 30px 0;
-  }
-}
-
 .best-restaurants {
   &__title {
     text-align: center;
@@ -362,7 +412,7 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 -30px 30px 0;
   }
 
@@ -372,20 +422,20 @@
 }
 
 .restaurant-card {
-
   max-width: 370px;
   height: 100%;
   background-color: $white;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 3px rgba($dark-d, 0.1);
   border-radius: 10px;
   transition: box-shadow 0.5s;
 
   &:hover {
-    box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
+    box-shadow: 0px 3px 15px rgba($orange, 0.5);
   }
 
   &__img {
     margin-bottom: 15px;
+    border-radius: 10px 10 px 0 0;
   }
 
   &__title {
@@ -400,7 +450,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 2;
-    padding-left: 35px;
+    padding-left: 33px;
     opacity: 0.9;
 
     &::before {
@@ -409,7 +459,7 @@
       width: 19px;
       height: 20px;
       top: 6px;
-      left: 0;
+      left: 5px;
       background-image: url('../images/svg/clock.svg');
       @extend %bg;
     }
@@ -419,17 +469,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 18px;
   }
 
   &__link {
     background-color: $orange;
     border-radius: 20px;
     padding: 3px 33px;
-    transition: transform 1s;
+    transition: transform 1s, fill 0.5s;
+
+    svg {
+      width: 14px;
+      height: 12px;
+      fill: $white;
+    }
 
     &:hover {
-      svg path {
+      svg {
         fill: $orange;
       }
 
@@ -439,13 +495,13 @@
     }
 
     &:focus {
-      svg path {
+      svg {
         fill: $orange;
       }
     }
 
     &:active {
-      svg path {
+      svg {
         fill: $orange;
       }
 
@@ -457,6 +513,8 @@
 }
 
 .comments {
+  padding-top: 60px;
+
   &__title {
     text-align: center;
     margin-bottom: 45px;
@@ -466,13 +524,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 990px;
   }
 
   &__img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    margin-right: 80px;
+    margin-right: 90px;
   }
 
   &__review {
@@ -485,26 +544,25 @@
     font-style: italic;
     margin-bottom: 30px;
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 24px;
-      height: 19px;
-      top: 0;
-      left: -35px;
-      background-image: url('../images/svg/quote-left.svg');
-      @extend %bg;
-    }
-
+    &::before,
     &::after {
       position: absolute;
       content: '';
       width: 24px;
       height: 19px;
+      background-image: url('../images/svg/quotes.svg');
+      @extend %bg;
+    }
+
+    &::before {
+      top: 0;
+      left: -35px;
+    }
+
+    &::after {
       bottom: 0;
       right: -35px;
-      background-image: url('../images/svg/quote-right.svg');
-      @extend %bg;
+      transform: scale(-1, 1);
     }
   }
 
@@ -517,22 +575,28 @@
   &__fan {
     display: block;
     font-size: 14px;
+    font-style: normal;
     line-height: 1.3;
     color: $dark;
     padding-top: 15px;
   }
 
+  .slick-disabled {
+    svg {
+      fill: $light-orange;
+    }
+  }
+
   .slick-dots {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 
     li {
-
       line-height: 0;
 
       &:not(:last-child) {
         margin-right: 15px;
-
       }
 
       button {
@@ -541,87 +605,102 @@
         width: 15px;
         height: 15px;
         border-radius: 50%;
-
-        &:focus {
-          box-shadow: 0 0 0 2px rgba($orange, 0.7);
-        }
-
-        &:hover {
-          background-color: $light;
-          border: 3px solid #FFAE94;
-        }
-
-        &:active {
-          background-color: #FFAE94;
-        }
       }
 
-      &.slick-active {
-        button {
-          background-color: $orange;
-        }
+      &:focus {
+        box-shadow: 0 0 0 2px rgba($orange, 0.7);
       }
-    }
-  }
 
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    background-color: rgba(255, 255, 255, 0.01);
-    border: 3px solid $gray;
-    border-radius: 50%;
-    bottom: -10px;
-  }
+      &:hover {
+        background-color: $light;
+        border: 3px solid #FFAE94;
+      }
 
-  .slick-prev {
-    left: 40%;
-    transition: background-color 0.5s, norder 0.5s, fill 0.5s, box-shadow 0.5s;
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba($orange, 0.7);
-    }
-
-    &:hover {
-      background-color: $light;
-      border: 3px solid #FFAE94;
-
-      svg path {
-        fill: #FFAE94;
+      &:active {
+        background-color: #FFAE94;
       }
     }
 
-    &:active {
-      background-color: $light;
-      border: 3px solid $light;
-
-      svg path {
-        fill: $light-orange;
+    &.slick-active {
+      button {
+        background-color: $orange;
       }
     }
   }
+}
 
-  .slick-next {
-    right: 40%;
+.slick-prev,
+.slick-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  fill: $gray;
+  background-color: rgba($white, 0.01);
+  border: 3px solid $gray;
+  border-radius: 50%;
+  bottom: -10px;
+
+  svg {
+    width: 11px;
+    height: 19px;
   }
+}
+
+.slick-prev {
+  left: 40%;
+  transition: background-color 0.5s, norder 0.5s, fill 0.5s, box-shadow 0.5s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($orange, 0.7);
+  }
+
+  &:hover {
+    background-color: $light;
+    border: 3px solid #FFAE94;
+
+    svg {
+      fill: #FFAE94;
+    }
+  }
+
+  &:active {
+    background-color: $light;
+    border: 3px solid $light;
+
+    svg {
+      fill: $light-orange;
+    }
+  }
+}
+
+.slick-next {
+  right: 40%;
+  transform: scale(-1, 1);
 }
 
 .apps {
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__title {
     margin-bottom: 45px;
   }
 
-  &__text {
+  &__content {
     max-width: 538px;
     width: 100%;
+  }
+
+  &__text {
     opacity: 0.9;
     margin-bottom: 30px;
+    @include line-clamp(3);
   }
 
   &__img {
@@ -641,55 +720,11 @@
   }
 }
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 210px;
-  height: 100%;
-  background-color: $white;
-  padding: 20px 15px;
-  text-align: center;
-  transition: box-shadow 0.5s;
-
-  &:hover {
-    box-shadow: 0 0 0 1px $orange;
-  }
-
-
-  &__img {
-    margin: 0 auto;
-    margin-bottom: 10px;
-  }
-
-  &__title {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-
-  &__price {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.4;
-    color: $darkBlue;
-    margin-bottom: 10px;
-    margin-top: auto;
-  }
-
-  &__btn {
-    font-size: 14px;
-    padding: 7px 16px;
-  }
-}
-
 .footer {
   &__top {
-    padding-bottom: 70px;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 70px;
   }
 
   &__logo {
@@ -699,22 +734,23 @@
 
   &__nav {
     column-count: 3;
+    column-gap: 5px;
   }
 
   &__item {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__link {
     font-size: 18px;
     line-height: 1.3;
     letter-spacing: 0.01em;
+    border-radius: 5px;
     transition: background-color 0.5s,
       border 0.5s,
       text-shadow 0.5s,
       color 0.5s,
       box-shadow 0.5s;
-    border-radius: 5px;
 
     &:focus {
       box-shadow: 0 0 0 2px rgba($orange, 0.7);
@@ -786,31 +822,34 @@
     padding: 13px 0;
     transition: fill 0.5s;
 
+    svg {
+      position: absolute;
+      left: 30px;
+      top: 15px;
+      width: 15px;
+      height: 15px;
+      fill: $white;
+    }
+
     &:focus {
 
-      svg path {
+      svg {
         fill: $orange;
       }
     }
 
     &:hover {
-      svg path {
+      svg {
         fill: $orange;
       }
     }
 
     &:active {
-      svg path {
+      svg {
         fill: $orange;
       }
 
     }
-  }
-
-  &__btn svg {
-    position: absolute;
-    left: 30px;
-    top: 15px;
   }
 
   &__link {
@@ -821,48 +860,32 @@
 }
 
 .contact {
+  margin-right: 75px;
 
   &__data {
-    position: relative;
     margin-bottom: 15px;
     padding-left: 5px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 9px;
-      left: 0;
-      @extend %bg;
-      height: 18px;
-    }
-
-    &--location {
-      &::before {
-        width: 15px;
-        background-image: url('../images/location.svg');
-      }
-    }
-
-    &--call {
-      &::before {
-        width: 19px;
-        background-image: url('../images/calling.svg');
-      }
-    }
-
-    &--message {
-      &::before {
-        width: 20px;
-        background-image: url('../images/message.svg');
-      }
-    }
   }
 
   &__info {
     font-size: 16px;
     line-height: 2;
-    padding-left: 25px;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 24px 24px;
 
+    &--location {
+      background-image: url('../images/svg/location.svg');
+    }
+
+    &--call {
+      background-image: url('../images/svg/calling.svg');
+    }
+
+    &--message {
+      background-image: url('../images/svg/message.svg');
+    }
   }
 }
 
@@ -875,12 +898,28 @@
     }
   }
 
+  &__facebook {
+    width: 10px;
+    height: 21px;
+  }
+
+  &__twitter {
+    width: 21px;
+    height: 17px;
+  }
+
+  &__instagram {
+    width: 20px;
+    height: 20px;
+  }
+
   &__link {
     @extend %flex;
     width: 39px;
     height: 39px;
     background-color: #ECECEC;
     border-radius: 50%;
+    fill: $dark;
     transition: box-shadow 0.5s,
       background-color 0.5s,
       fill 0.5s;
@@ -889,7 +928,7 @@
       background-color: $light;
       box-shadow: 0 0 0 2px rgba($orange, 0.7);
 
-      svg path {
+      svg {
         fill: $dark;
       }
     }
@@ -897,7 +936,7 @@
     &:hover {
       background-color: $light-orange;
 
-      svg path {
+      svg {
         fill: $white;
       }
     }
@@ -905,9 +944,532 @@
     &:active {
       background-color: $light;
 
-      svg path {
+      svg {
         fill: $light-orange;
       }
+    }
+  }
+}
+
+@media (max-width:1200px) {
+  .section-padding {
+    padding-top: 80px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .hero {
+    &__title {
+      font-size: 60px;
+    }
+
+    &__content {
+      margin-right: 20px;
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+  }
+
+  .popular-categories {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__btn {
+      width: 100%;
+      padding: 18px 25px 18px 70px;
+
+      svg {
+        top: 15px;
+        left: 25px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .burgers {
+    margin: 0 -20px 20px 0;
+
+    &__item {
+      width: 100%;
+      margin: 0 20px 20px 0;
+    }
+  }
+
+  .delivery {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      margin-right: 20px;
+    }
+
+    &__item {
+      font-size: 20px;
+      padding-left: 40px;
+
+      &::before {
+        width: 30px;
+        height: 30px;
+        top: 2px;
+        left: 0;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .best-restaurants {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__items {
+      margin: 0 -20px 20px 0;
+    }
+
+    &__item {
+      margin: 0 20px 20px 0;
+    }
+  }
+
+  .comments {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__slider {
+      max-width: 940px;
+      width: 100%;
+    }
+
+    &__img {
+      margin-right: 60px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  .apps {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      max-width: 480px;
+      width: 100%;
+      margin-right: 20px;
+    }
+  }
+
+  .footer {
+    &__top {
+      padding-bottom: 50px;
+    }
+
+    &__items {
+      margin-right: 25px;
+    }
+  }
+
+  .form-subscribe {
+    &__btn {
+      position: relative;
+
+      svg {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .section-padding {
+    padding-top: 65px;
+  }
+
+  .header {
+    padding: 50px 0;
+  }
+
+  .hero {
+    &__title {
+      font-size: 55px;
+    }
+
+    &__content {
+      width: 50%;
+      margin-right: 20px;
+    }
+
+    &__link {
+      font-size: 18px;
+    }
+
+    &__btn {
+      font-size: 16px;
+      padding: 10px 30px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__img {
+      max-width: 400px;
+      width: 100%;
+      background-size: contain;
+    }
+  }
+
+  .popular-categories {
+
+    &__menu {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x;
+    }
+
+    &__item {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+    }
+
+    &__btn {
+      font-size: 18px;
+      padding: 12px 18px 12px 50px;
+      position: relative;
+
+      svg {
+        top: 10px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .burgers {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -15px 15px 0;
+
+    &__item {
+      width: 100%;
+      margin: 0 15px 15px 0;
+    }
+  }
+
+  .delivery {
+    &__text {
+      font-size: 18px;
+    }
+
+    &__item {
+      font-size: 18px;
+
+      &::before {
+        top: -3px;
+        left: 3px;
+      }
+    }
+
+    &__img {
+      width: 50%;
+      background-size: contain;
+    }
+  }
+
+  .best-restaurants {
+    &__items {
+      margin: 0 -15px 15px 0;
+    }
+
+    &__item {
+      margin: 0 15px 15px 0;
+      width: 45%;
+    }
+  }
+
+  .comments {
+    margin-right: 40px;
+
+    &__review {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    &__text:after {
+      right: 0;
+    }
+
+    &__img {
+      margin-right: 40px;
+    }
+  }
+
+  .slick-prev {
+    left: 35%;
+  }
+
+  .slick-next {
+    right: 35%;
+  }
+
+  .apps {
+    &__img {
+      max-width: 500px;
+      width: 100%;
+      background-size: contain;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__application {
+      max-width: 110px;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    &__top {
+      flex-wrap: wrap;
+    }
+
+    &__nav {
+      order: 2;
+    }
+  }
+
+  .contact {
+    order: 1;
+  }
+}
+
+@media (max-width:768px) {
+  body.lock {
+    overflow-y: hidden;
+  }
+
+  .burger {
+    display: block;
+    order: 1;
+  }
+
+  .logo {
+    max-width: 150px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .menu {
+    &__list {
+      display: none;
+    }
+  }
+
+  .user-nav {
+    margin-left: 0 15px 0 auto;
+
+    &__link {
+      order: 2;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .hero {
+    &__content {
+      width: 70%;
+      margin-right: 0;
+    }
+
+    &__img {
+      position: absolute;
+      opacity: 0.2;
+      background-size: 75%;
+      background-position: 100% 55%;
+    }
+  }
+
+  .comments {
+    &__slider {
+      flex-direction: column;
+    }
+
+    &__img {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &__review {
+      max-width: 80%;
+    }
+
+    .slick-prev {
+      left: 7px;
+      top: 20%;
+    }
+
+    .slick-next {
+      right: -7px;
+      top: 20%;
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .header {
+    padding: 24px 0;
+  }
+
+  .logo {
+    max-width: 115px;
+    height: 23px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .user-nav {
+    &__link {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .hero {
+    &__content {
+      width: 80%;
+    }
+
+    &__title {
+      font-size: 40px;
+      padding-top: 50px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 8px 24px;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+
+    &__img {
+      background-size: 60%;
+    }
+  }
+
+  .popular-categories {
+    &__btn {
+      font-size: 14px;
+      padding: 12px 16px 12px 41px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__menu {
+      margin-bottom: 30px;
+    }
+  }
+
+  .burgers {
+    margin: 0 -5px 10px 0;
+
+    &__item {
+      max-width: 170px;
+      width: 100%;
+      margin: 0 5px 10px 0;
+    }
+  }
+
+  .product-card {
+    max-width: 170px;
+    width: 100%;
+
+    &__title {
+      margin-bottom: 10px;
+    }
+  }
+
+  .delivery {
+    &__img {
+      position: absolute;
+      opacity: 0.2;
+      width: 100%;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+
+  .comments {
+    &__img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .slick-prev,
+    .slick-next {
+      width: 34px;
+      height: 34px;
+    }
+
+    .slick-prev {
+      left: 20%;
+      top: 10%;
+    }
+
+    .slick-next {
+      right: 20%;
+      top: 10%;
     }
   }
 }

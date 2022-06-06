@@ -129,20 +129,17 @@ body {
     background-color 0.5s, fill 0.5s;
 
   &:focus {
-
     color: $orange;
     box-shadow: 0 0 0 2px rgba($orange, 0.7);
   }
 
   &:hover {
-
     color: $orange;
     background-color: $white;
     box-shadow: 0 0 0 2px rgba($orange, 0.7);
   }
 
   &:active {
-
     color: $orange;
     background-color: $light;
   }
@@ -167,4 +164,51 @@ body {
 
 .section-padding {
   padding-top: 120px;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  z-index: 2;
+
+  &__line {
+    top: 21px;
+  }
+
+  &__line,
+  &::before,
+  &::after {
+    position: absolute;
+    background-color: $darkBlue;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    transition: transform 0.3s ease 0s;
+  }
+
+  &::before {
+    content: '';
+    top: 12px;
+  }
+
+  &::after {
+    content: '';
+    bottom: 12px;
+  }
+
+  &.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  &.active:after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  &.active {
+    background-color: transparent;
+  }
 }
