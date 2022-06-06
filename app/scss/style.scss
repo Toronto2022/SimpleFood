@@ -609,15 +609,18 @@
 
       &:focus {
         box-shadow: 0 0 0 2px rgba($orange, 0.7);
+        border-radius: 50%;
       }
 
       &:hover {
         background-color: $light;
         border: 3px solid #FFAE94;
+        border-radius: 50%;
       }
 
       &:active {
         background-color: #FFAE94;
+        border-radius: 50%;
       }
     }
 
@@ -682,6 +685,8 @@
 }
 
 .apps {
+  padding-top: 120px;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -1052,11 +1057,6 @@
       margin-bottom: 30px;
     }
 
-    &__slider {
-      max-width: 940px;
-      width: 100%;
-    }
-
     &__img {
       margin-right: 60px;
     }
@@ -1080,7 +1080,7 @@
 
   .footer {
     &__top {
-      padding-bottom: 50px;
+      padding-bottom: 30px;
     }
 
     &__items {
@@ -1117,7 +1117,7 @@
 
     &__content {
       width: 50%;
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     &__link {
@@ -1134,7 +1134,7 @@
     }
 
     &__img {
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
       background-size: contain;
     }
@@ -1211,10 +1211,10 @@
   }
 
   .comments {
+    padding-top: 40px;
     margin-right: 40px;
 
     &__review {
-      max-width: 400px;
       width: 100%;
     }
 
@@ -1236,6 +1236,8 @@
   }
 
   .apps {
+    padding-top: 40px;
+
     &__img {
       max-width: 500px;
       width: 100%;
@@ -1244,11 +1246,6 @@
 
     &__text {
       font-size: 18px;
-    }
-
-    &__application {
-      max-width: 110px;
-      width: 100%;
     }
   }
 
@@ -1268,9 +1265,6 @@
 }
 
 @media (max-width:768px) {
-  body.lock {
-    overflow-y: hidden;
-  }
 
   .burger {
     display: block;
@@ -1290,7 +1284,7 @@
   }
 
   .user-nav {
-    margin-left: 0 15px 0 auto;
+    margin: 0 15px 0 auto;
 
     &__link {
       order: 2;
@@ -1313,14 +1307,61 @@
     }
   }
 
+  .best-restaurants {
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      li {
+        line-height: 0;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        button {
+          font-size: 0;
+          background-color: $gray;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 2px rgba($orange, 0.7);
+          border-radius: 50%;
+        }
+
+        &:hover {
+          background-color: $light;
+          border: 3px solid #FFAE94;
+          border-radius: 50%;
+        }
+
+        &:active {
+          background-color: #FFAE94;
+          border-radius: 50%;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+
   .comments {
+    margin-right: 0;
+
     &__slider {
       flex-direction: column;
     }
 
     &__img {
-      margin: 0 auto;
-      margin-bottom: 30px;
+      margin: 0 0 30px 0;
     }
 
     &__review {
@@ -1329,12 +1370,12 @@
 
     .slick-prev {
       left: 7px;
-      top: 20%;
+      top: 130px;
     }
 
     .slick-next {
       right: -7px;
-      top: 20%;
+      top: 130px;
     }
   }
 }
@@ -1451,6 +1492,10 @@
   }
 
   .comments {
+    &__review {
+      max-width: 340px;
+    }
+
     &__img {
       width: 100px;
       height: 100px;
@@ -1463,13 +1508,65 @@
     }
 
     .slick-prev {
-      left: 20%;
-      top: 10%;
+      left: 60px;
+      top: 45px;
     }
 
     .slick-next {
-      right: 20%;
-      top: 10%;
+      right: 90px;
+      top: 45px;
     }
+  }
+
+  .apps {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+
+  .footer {
+    &__logo {
+      max-width: 200px;
+      height: 39px;
+      margin-bottom: 30px;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin-bottom: 0;
+      padding: 10px 0;
+    }
+
+    &__bottom {
+      padding: 20px 0;
+      border-top: 1px solid transparent;
+    }
+  }
+
+  .form-subscribe {
+    &__btn {
+      margin-bottom: 30px;
+    }
+  }
+
+  .address {
+    margin-bottom: 20px;
   }
 }
