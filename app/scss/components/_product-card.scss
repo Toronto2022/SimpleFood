@@ -1,0 +1,44 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 210px;
+  height: 100%;
+  background-color: $white;
+  padding: 20px 15px;
+  text-align: center;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $orange;
+  }
+
+
+  &__img {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1;
+    margin-bottom: 20px;
+    @include line-clamp(3);
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $darkBlue;
+    margin: auto 0 7px 0;
+  }
+
+  &__btn {
+    font-size: 14px;
+    padding: 7px 16px;
+  }
+}

@@ -1,0 +1,61 @@
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+  }
+
+  &__facebook {
+    width: 10px;
+    height: 21px;
+  }
+
+  &__twitter {
+    width: 21px;
+    height: 17px;
+  }
+
+  &__instagram {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__link {
+    @extend %flex;
+    width: 39px;
+    height: 39px;
+    background-color: #ECECEC;
+    border-radius: 50%;
+    fill: $dark;
+    transition: box-shadow 0.5s,
+      background-color 0.5s,
+      fill 0.5s;
+
+    &:focus {
+      background-color: $light;
+      box-shadow: 0 0 0 2px rgba($orange, 0.7);
+
+      svg {
+        fill: $dark;
+      }
+    }
+
+    &:hover {
+      background-color: $light-orange;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      background-color: $light;
+
+      svg {
+        fill: $light-orange;
+      }
+    }
+  }
+}

@@ -32,3 +32,8 @@ $(window).on('load resize', function () {
     $(".best-restaurants__items.slick-initialized").slick("unslick");
   }
 });
+
+$('.burger,.mobile-menu ').on('click', function () {
+  $('.mobile-menu,.overlay').toggleClass('active');
+  $('body').toggleClass('lock');
+});

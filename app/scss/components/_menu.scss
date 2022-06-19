@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    margin-left: auto;
+    margin-right: 45px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    color: $dark;
+    text-decoration: underline transparent;
+
+    &--active {
+      color: $orange;
+    }
+  }
+}

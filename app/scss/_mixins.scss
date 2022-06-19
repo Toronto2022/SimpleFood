@@ -13,3 +13,9 @@
     -webkit-box-orient: vertical;
   }
 }
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}

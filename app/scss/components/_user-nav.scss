@@ -1,0 +1,62 @@
+.user-nav {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__link {
+    @extend %flex;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, stroke 0.5s;
+
+    svg {
+      width: 21px;
+      height: 22px;
+      fill-opacity: 0;
+      stroke: $darkBlue;
+      stroke-width: 1.5px;
+    }
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0 0 0 2px rgba($orange, 0.7);
+    }
+
+    &:hover {
+      background-color: $light-orange;
+
+      svg {
+        stroke: $white;
+      }
+    }
+
+    &:hover span {
+      background-color: $white;
+      color: $light-orange;
+    }
+  }
+
+  &:active {
+    background-color: $light;
+  }
+
+  &__num {
+    position: absolute;
+    top: 5px;
+    left: 26px;
+    padding: 1px 4px;
+    border-radius: 100px;
+    background-color: $orange;
+    color: $white;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}

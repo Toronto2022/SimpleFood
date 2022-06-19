@@ -1,0 +1,19 @@
+.logo {
+  border-radius: 5px;
+  transition: background-color 0.5s,
+    border 0.5s,
+    opacity 0.5s,
+    box-shadow 0.5s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($orange, 0.7);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

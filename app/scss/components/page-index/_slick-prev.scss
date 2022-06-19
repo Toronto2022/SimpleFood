@@ -1,0 +1,45 @@
+.slick-prev {
+  left: 40%;
+  transition: background-color 0.5s, norder 0.5s, fill 0.5s, box-shadow 0.5s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($orange, 0.7);
+  }
+
+  &:hover {
+    background-color: $light;
+    border: 3px solid #FFAE94;
+
+    svg {
+      fill: #FFAE94;
+    }
+  }
+
+  &:active {
+    background-color: $light;
+    border: 3px solid $light;
+
+    svg {
+      fill: $light-orange;
+    }
+  }
+}
+
+.slick-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  fill: $gray;
+  background-color: rgba($white, 0.01);
+  border: 3px solid $gray;
+  border-radius: 50%;
+  bottom: -10px;
+
+  svg {
+    width: 11px;
+    height: 19px;
+  }
+}

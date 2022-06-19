@@ -1,0 +1,37 @@
+.burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  z-index: 3;
+
+  &:before,
+  &:after {
+    position: absolute;
+    background-color: $darkBlue;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    transition: transform 0.3s ease 0s;
+  }
+
+  &::before {
+    content: '';
+    top: 12px;
+  }
+
+  &::after {
+    content: '';
+    bottom: 12px;
+  }
+
+  &__line {
+    top: 21px;
+    position: absolute;
+    background-color: $darkBlue;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    transition: transform 0.3s ease 0s;
+  }
+}

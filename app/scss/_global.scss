@@ -166,49 +166,6 @@ body {
   padding-top: 120px;
 }
 
-.burger {
+.mobile-menu {
   display: none;
-  position: relative;
-  width: 44px;
-  height: 44px;
-  z-index: 2;
-
-  &__line {
-    top: 21px;
-  }
-
-  &__line,
-  &::before,
-  &::after {
-    position: absolute;
-    background-color: $darkBlue;
-    right: 0;
-    width: 30px;
-    height: 2px;
-    transition: transform 0.3s ease 0s;
-  }
-
-  &::before {
-    content: '';
-    top: 12px;
-  }
-
-  &::after {
-    content: '';
-    bottom: 12px;
-  }
-
-  &.active:before {
-    transform: rotate(45deg);
-    top: 0;
-  }
-
-  &.active:after {
-    transform: rotate(-45deg);
-    bottom: 0;
-  }
-
-  &.active {
-    background-color: transparent;
-  }
 }
