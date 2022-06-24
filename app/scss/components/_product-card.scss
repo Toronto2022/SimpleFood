@@ -10,6 +10,10 @@
   text-align: center;
   transition: box-shadow 0.5s;
 
+  @include r($small) {
+    width: 100%;
+  }
+
   &:hover {
     box-shadow: 0 0 0 1px $orange;
   }
@@ -27,6 +31,10 @@
     line-height: 1;
     margin-bottom: 20px;
     @include line-clamp(3);
+
+    @include r($small) {
+      margin-bottom: 10px;
+    }
   }
 
   &__price {

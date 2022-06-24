@@ -5,6 +5,11 @@
   height: 44px;
   z-index: 3;
 
+  @include r($medium) {
+    display: block;
+    order: 1;
+  }
+
   &:before,
   &:after {
     position: absolute;

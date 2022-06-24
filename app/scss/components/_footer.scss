@@ -3,20 +3,80 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 70px;
+
+    @include r($xl) {
+      padding-bottom: 30px;
+    }
+
+    @include r($large) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    @include r($small) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 
   &__logo {
     display: block;
     margin-bottom: 30px;
+
+    @include r($small) {
+      max-width: 200px;
+      height: 39px;
+      margin-bottom: 30px;
+    }
   }
 
   &__nav {
     column-count: 3;
     column-gap: 5px;
+
+    @include r($large) {
+      column-count: 2;
+      column-gap: 70px;
+    }
+
+    @include r($medium) {
+      column-gap: 5px;
+      margin-bottom: 20px;
+    }
+
+    @include r($small) {
+      column-count: 1;
+      order: 2;
+    }
+  }
+
+  &__items {
+    @include r($xl) {
+      margin-right: 25px;
+    }
+
+    @include r($large) {
+      margin: 0 75px 30px 0;
+    }
+
+    @include r($medium) {
+      margin-right: 20px;
+    }
+
+    @include r($small) {
+      margin-bottom: 0;
+    }
   }
 
   &__item {
     margin-bottom: 10px;
+
+    @include r($small) {
+      margin-bottom: 0;
+      padding: 10px 0;
+    }
   }
 
   &__link {
@@ -47,6 +107,10 @@
     padding: 30px 0;
     border-top: 1px solid $gray;
     text-align: center;
+
+    @include r($small) {
+      padding: 20px 0;
+    }
   }
 
   &__copy {

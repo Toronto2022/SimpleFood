@@ -1,6 +1,10 @@
 .user-nav {
   display: flex;
 
+  @include r($medium) {
+    margin: 0 15px 0 auto;
+  }
+
   &__item {
     &:not(:last-child) {
       margin-right: 18px;
@@ -16,12 +20,28 @@
     border-radius: 5px;
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, stroke 0.5s;
 
+    @include r($medium) {
+      order: 2;
+      width: 40px;
+      height: 40px;
+    }
+
+    @include r($small) {
+      width: 40px;
+      height: 40px;
+    }
+
     svg {
       width: 21px;
       height: 22px;
       fill-opacity: 0;
       stroke: $darkBlue;
       stroke-width: 1.5px;
+
+      @include r($small) {
+        width: 18px;
+        height: 18px;
+      }
     }
 
     &:focus {

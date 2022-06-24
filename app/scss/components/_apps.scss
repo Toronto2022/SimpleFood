@@ -1,25 +1,52 @@
 .apps {
   padding-top: 120px;
 
+  @include r($large) {
+    padding-top: 40px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r($small) {
+      flex-direction: column;
+    }
   }
 
   &__title {
     margin-bottom: 45px;
+
+    @include r($small) {
+      margin-bottom: 15px;
+    }
   }
 
   &__content {
     max-width: 538px;
     width: 100%;
+
+    @include r($xl) {
+      max-width: 480px;
+      width: 100%;
+      margin-right: 20px;
+    }
   }
 
   &__text {
     opacity: 0.9;
     margin-bottom: 30px;
     @include line-clamp(3);
+
+    @include r($large) {
+      font-size: 18px;
+    }
+
+    @include r($small) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
   }
 
   &__img {
@@ -27,6 +54,16 @@
     max-width: 570px;
     width: 100%;
     height: 380px;
+
+    @include r($large) {
+      max-width: 500px;
+      width: 100%;
+      background-size: contain;
+    }
+
+    @include r($small) {
+      display: none;
+    }
   }
 
   &__items {

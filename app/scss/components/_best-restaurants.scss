@@ -1,0 +1,85 @@
+.best-restaurants {
+  @include r ($medium) {
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      li {
+        line-height: 0;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+
+      button {
+        font-size: 0;
+        background-color: $gray;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+
+        &:focus {
+          box-shadow: 0 0 0 2px rgba($orange, 0.7);
+        }
+
+        &:hover {
+          background-color: $light;
+          border: 3px solid #FFAE94;
+        }
+
+        &:active {
+          background-color: #FFAE94;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -30px 30px 0;
+
+    @include r ($xl) {
+      margin: 0 -20px 20px 0;
+    }
+
+    @include r ($large) {
+      margin: 0 -15px 15px 0;
+    }
+
+    @include r ($small) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    margin: 0 30px 30px 0;
+
+    @include r ($xl) {
+      margin: 0 20px 20px 0;
+    }
+
+    @include r ($large) {
+      margin: 0 15px 15px 0;
+      width: 45%;
+    }
+
+    @include r ($small) {
+      margin: 0;
+    }
+  }
+}

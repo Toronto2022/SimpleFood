@@ -5,6 +5,15 @@
     opacity 0.5s,
     box-shadow 0.5s;
 
+  &__img {
+    @include r($small) {
+      width: 115px;
+      height: 23px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
   &:focus {
     box-shadow: 0 0 0 2px rgba($orange, 0.7);
   }

@@ -1,6 +1,15 @@
 .comments {
   padding-top: 60px;
 
+  @include r($xl) {
+    padding-top: 40px;
+    margin-right: 40px;
+  }
+
+  @include r($medium) {
+    margin-right: 0;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 45px;
@@ -11,6 +20,10 @@
     justify-content: center;
     align-items: center;
     max-width: 990px;
+
+    @include r($medium) {
+      flex-direction: column;
+    }
   }
 
   &__img {
@@ -18,16 +31,50 @@
     height: 300px;
     border-radius: 50%;
     margin-right: 90px;
+
+    @include r($xl) {
+      margin-right: 60px;
+    }
+
+    @include r($large) {
+      margin-right: 40px;
+    }
+
+    @include r($medium) {
+      margin: 0 0 30px 0;
+    }
+
+    @include r($small) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__review {
     width: 100%;
     max-width: 570px;
+
+    @include r($xl) {
+      width: 90%;
+    }
+
+    @include r($medium) {
+      max-width: 60%;
+    }
   }
 
   &__text {
     position: relative;
     font-style: italic;
+
+    @include r($xl) {
+      font-size: 18px;
+    }
+
+    @include r($small) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
 
     &::before,
     &::after {
@@ -48,6 +95,10 @@
       bottom: 0;
       right: -35px;
       transform: scale(-1, 1);
+
+      @include r($large) {
+        right: 0;
+      }
     }
   }
 
@@ -58,6 +109,10 @@
     line-height: 1.3;
     color: $orange;
     padding-top: 30px;
+
+    @include r($small) {
+      font-size: 16px;
+    }
   }
 
   &__fan {
@@ -67,6 +122,11 @@
     line-height: 1.3;
     color: $dark;
     padding-top: 15px;
+
+    @include r($small) {
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
 
   .slick-disabled {
@@ -113,6 +173,49 @@
       button {
         background-color: $orange;
       }
+    }
+  }
+
+  .slick-prev {
+    @include r($large) {
+      left: 35%;
+    }
+
+    @include r($medium) {
+      left: 30px;
+      z-index: 15;
+    }
+
+    @include r($small) {
+      left: 60px;
+      top: 40px;
+    }
+  }
+
+  .slick-next {
+    @include r($large) {
+      right: 35%;
+    }
+
+    @include r($medium) {
+      right: 30px;
+    }
+
+    @include r($small) {
+      right: 60px;
+      top: 40px;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    @include r($medium) {
+      top: 130px;
+    }
+
+    @include r($small) {
+      width: 34px;
+      height: 34px;
     }
   }
 }

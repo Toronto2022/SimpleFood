@@ -80,6 +80,27 @@ body {
   line-height: 1.5;
   background-color: $bg-color;
   color: $dark;
+
+  &.lock {
+    @include r($large) {
+      overflow-y: hidden;
+    }
+  }
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .wrapper {
@@ -116,6 +137,15 @@ body {
   font-size: 36px;
   line-height: 1.3;
   color: $darkBlue;
+
+  @include r ($xl) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include r ($small) {
+    font-size: 24px;
+  }
 }
 
 .button {
@@ -164,6 +194,14 @@ body {
 
 .section-padding {
   padding-top: 120px;
+
+  @include r($xl) {
+    padding-top: 80px;
+  }
+
+  @include r($large) {
+    padding-top: 65px;
+  }
 }
 
 .mobile-menu {

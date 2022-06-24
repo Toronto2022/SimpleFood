@@ -12,11 +12,36 @@
     display: flex;
     align-items: center;
     margin-bottom: 45px;
+
+    @include r($large) {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x;
+      padding-bottom: 10px;
+    }
+
+    @include r($small) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    @include r($large) {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
+    }
+
+    @include r($xl) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -30,12 +55,48 @@
     border-radius: 5px;
     transition: box-shadow 0.5s, color 0.5s, background-color 0.5s, fill 0.5s;
 
+    @include r($xl) {
+      width: 100%;
+      padding: 18px 25px 18px 70px;
+      white-space: nowrap;
+    }
+
+    @include r($large) {
+      font-size: 18px;
+      padding: 12px 18px 12px 50px;
+      position: relative;
+    }
+
+    @include r($small) {
+      font-size: 14px;
+      padding: 12px 16px 12px 41px;
+    }
+
     svg {
       position: absolute;
       top: 15px;
       left: 35px;
       width: 44px;
       height: 44px;
+
+      @include r($xl) {
+        top: 15px;
+        left: 25px;
+        width: 40px;
+        height: 40px;
+      }
+
+      @include r($large) {
+        top: 10px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+      }
+
+      @include r($small) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &:focus {

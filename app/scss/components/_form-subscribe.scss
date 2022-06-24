@@ -43,6 +43,14 @@
     padding: 13px 0;
     transition: fill 0.5s;
 
+    @include r($xl) {
+      position: relative;
+    }
+
+    @include r($small) {
+      margin-bottom: 30px;
+    }
+
     svg {
       position: absolute;
       left: 30px;
@@ -50,6 +58,12 @@
       width: 15px;
       height: 15px;
       fill: $white;
+
+      @include r($xl) {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
     }
 
     &:focus {
