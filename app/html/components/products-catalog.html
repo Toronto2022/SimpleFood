@@ -2,20 +2,19 @@
   <div class="container">
     <div class="product-catalog__content">
       <h2 class="product-catalog__title title">Каталог продуктов</h2>
-      <div class="product-catalog__selects">
-        <form class="product-catalog__form" action="#">
-          <select class="product-catalog__name">
-            <option value="">По названию</option>
-            <option value="">meat</option>
-            <option value="">burger</option>
-          </select>
-          <select class="product-catalog__number">
-            <option value="">по 12</option>
-            <option value="">2</option>
-            <option value="">3</option>
-          </select>
-        </form>
-      </div>
+      <form class="product-catalog__form" action="#">
+        <select class="product-catalog__name">
+          <option value="По названию" name="По названию">По названию</option>
+          <option value="Рыба" name="meal">Рыба</option>
+          <option value="Мясо" name="meal">Мясо</option>
+          <option value="Бургер" name="meal">Бургер</option>
+        </select>
+        <select class="product-catalog__number">
+          <option value="">по 12</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+      </form>
     </div>
     <div class="product-catalog__inner">
       <div class="product-catalog__filters">
@@ -23,28 +22,29 @@
           <h3 class="product-catalog-categories__title filter-title">Категории</h3>
           <ul class="product-catalog-categories__list">
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Бургеры</a>
+              <a class="product-catalog-categories__link product-catalog-categories__link--active animation"
+                href="#">Бургеры</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Пицца</a>
+              <a class="product-catalog-categories__link animation" href="#">Пицца</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Сендвичи</a>
+              <a class="product-catalog-categories__link animation" href="#">Сендвичи</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Азиатская кухня</a>
+              <a class="product-catalog-categories__link animation" href="#">Азиатская кухня</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog__link" href="#">Сеты</a>
+              <a class="product-catalog__link animation" href="#">Сеты</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Европейская кухня</a>
+              <a class="product-catalog-categories__link animation" href="#">Европейская кухня</a>
             </li>
             <li class="product-catalog__item">
-              <a class="product-catalog__link" href="#">Напитки</a>
+              <a class="product-catalog__link animation" href="#">Напитки</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Алкоголь</a>
+              <a class="product-catalog-categories__link animation" href="#">Алкоголь</a>
             </li>
           </ul>
         </div>

@@ -150,20 +150,19 @@
   <div class="container">
     <div class="product-catalog__content">
       <h2 class="product-catalog__title title">Каталог продуктов</h2>
-      <div class="product-catalog__selects">
-        <form class="product-catalog__form" action="#">
-          <select class="product-catalog__name">
-            <option value="">По названию</option>
-            <option value="">meat</option>
-            <option value="">burger</option>
-          </select>
-          <select class="product-catalog__number">
-            <option value="">по 12</option>
-            <option value="">2</option>
-            <option value="">3</option>
-          </select>
-        </form>
-      </div>
+      <form class="product-catalog__form" action="#">
+        <select class="product-catalog__name">
+          <option value="По названию" name="По названию">По названию</option>
+          <option value="Рыба" name="meal">Рыба</option>
+          <option value="Мясо" name="meal">Мясо</option>
+          <option value="Бургер" name="meal">Бургер</option>
+        </select>
+        <select class="product-catalog__number">
+          <option value="">по 12</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+      </form>
     </div>
     <div class="product-catalog__inner">
       <div class="product-catalog__filters">
@@ -171,28 +170,29 @@
           <h3 class="product-catalog-categories__title filter-title">Категории</h3>
           <ul class="product-catalog-categories__list">
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Бургеры</a>
+              <a class="product-catalog-categories__link product-catalog-categories__link--active animation"
+                href="#">Бургеры</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Пицца</a>
+              <a class="product-catalog-categories__link animation" href="#">Пицца</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Сендвичи</a>
+              <a class="product-catalog-categories__link animation" href="#">Сендвичи</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Азиатская кухня</a>
+              <a class="product-catalog-categories__link animation" href="#">Азиатская кухня</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog__link" href="#">Сеты</a>
+              <a class="product-catalog__link animation" href="#">Сеты</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Европейская кухня</a>
+              <a class="product-catalog-categories__link animation" href="#">Европейская кухня</a>
             </li>
             <li class="product-catalog__item">
-              <a class="product-catalog__link" href="#">Напитки</a>
+              <a class="product-catalog__link animation" href="#">Напитки</a>
             </li>
             <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link" href="#">Алкоголь</a>
+              <a class="product-catalog-categories__link animation" href="#">Алкоголь</a>
             </li>
           </ul>
         </div>
@@ -435,51 +435,31 @@
     <section class="discounts section-padding">
   <div class="container">
     <h2 class="discounts__title title">Акции и скидки</h2>
-    <ul class="discounts__list">
-      <li class="discounts__item">
+    <ul class="best-restaurants__items discounts__items">
+
+      <li class="best-restaurants__item discounts__item">
         <article class="restaurant-card">
           <img class="restaurant-card__img" width="370" height="300" src="images/restaurants/blaze-pizza.jpg"
             alt="Blaze Pizza">
-          <h3 class="restaurant-card__title">Blaze Pizza</h3>
-          <div class="restaurant-card__common">
-            <time class="restaurant-card__time" datetime="11:00 - 22:00">11:00 - 22:00</time>
-            <a class="restaurant-card__link button" href="#">
-              <svg>
-                <use xlink:href="images/sprite.svg#arrow"></use>
-              </svg>
-            </a>
-          </div>
+          <h3 class="restaurant-card__title discounts__subtitle">Скидка 50% на вторую пиццу</h3>
         </article>
       </li>
-      <li class="discounts__item">
+
+      <li class="best-restaurants__item discounts__item">
         <article class="restaurant-card">
           <img class="restaurant-card__img" width="370" height="300" src="images/restaurants/kfc.jpg" alt="KFC">
-          <h3 class="restaurant-card__title">KFC</h3>
-          <div class="restaurant-card__common">
-            <time class="restaurant-card__time" datetime="06:00 - 23:30">06:00 - 23:30</time>
-            <a class="restaurant-card__link button" href="#">
-              <svg>
-                <use xlink:href="images/sprite.svg#arrow"></use>
-              </svg>
-            </a>
-          </div>
+          <h3 class="restaurant-card__title discounts__subtitle">Картошечка из KFC даром при заказе бургера</h3>
         </article>
       </li>
-      <li class="discounts__item">
+
+      <li class="best-restaurants__item discounts__item">
         <article class="restaurant-card">
           <img class="restaurant-card__img" width="370" height="300" src="images/restaurants/star-burger.jpg"
             alt="Star Burgers">
-          <h3 class="restaurant-card__title">Star Burgers</h3>
-          <div class="restaurant-card__common">
-            <time class="restaurant-card__time" datetime="09:00 - 21:00">09:00 - 21:00</time>
-            <a class="restaurant-card__link button" href="#">
-              <svg>
-                <use xlink:href="images/sprite.svg#arrow"></use>
-              </svg>
-            </a>
-          </div>
+          <h3 class="restaurant-card__title discounts__subtitle">Чёрные бургеры на чёрный день </h3>
         </article>
       </li>
+
     </ul>
   </div>
 </section>
