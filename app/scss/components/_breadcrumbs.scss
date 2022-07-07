@@ -1,12 +1,19 @@
 .breadcrumbs {
+  max-width: 1905px;
+  width: 100%;
+  background-color: rgba(255, 122, 80, 0.1);
+  padding: 24px 0;
+
   &__list {
     display: flex;
   }
 
   &__item {
     color: #505050;
+    font-size: 14px;
+    line-height: 1.2;
     position: relative;
-    padding-right: 40px;
+    padding-right: 30px;
 
     &::after {
       content: "";
@@ -15,9 +22,13 @@
       @extend %bg;
       width: 6px;
       height: 10px;
-      right: 15px;
-      top: 9px;
+      right: 10px;
+      top: 4px;
+      transform: scale(-1, 1);
+    }
 
+    &:last-child::after {
+      display: none;
     }
   }
 }

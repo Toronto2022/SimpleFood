@@ -208,8 +208,18 @@ body {
   display: none;
 }
 
-.breadcrumbs {
-  max-width: 1700px;
-  background-color: rgba(255, 122, 80, 0.1);
-  padding: 24px 0;
+.filter-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.filter-style {
+  background-color: #FFFFFF;
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+  padding: 15px 0 19px 15px;
+  margin-bottom: 30px;
 }

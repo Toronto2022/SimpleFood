@@ -1,5 +1,20 @@
 var mixer = mixitup('.burgers');
 $(function () {
+
+  $('.product-catalog__name,.product-catalog__number').styler();
+
+  $('.product-catalog-price__input').ionRangeSlider({
+    type: "double",
+    onStart: function (data) {
+      $('.product-catalog-price__from').text(data.from);
+      $('.product-catalog-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.product-catalog-price__from').text(data.from);
+      $('.product-catalog-price__to').text(data.to);
+    },
+  })
+
   $('.comments__inner').slick({
     dots: true,
     arrows: true,
