@@ -1,14 +1,8 @@
 .contact {
-  margin-right: 75px;
-
-  @include r($small) {
-    order: 1;
-    margin-bottom: 30px;
-  }
-
   &__data {
-    margin-bottom: 15px;
-    padding-left: 5px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   &__info {

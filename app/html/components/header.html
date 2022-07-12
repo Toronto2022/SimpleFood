@@ -1,6 +1,6 @@
  <header class="header">
    <div class="container">
-     <nav class="menu">
+     <nav class="header__menu">
        <a class="logo" href="#">
          <img class="logo__img" src="images/svg/logo.svg" width="200" height="39" alt="логотип">
        </a>
@@ -8,19 +8,19 @@
          <span class="burger__line"></span>
          <span class="sr-only">открыть меню</span>
        </button>
-       <ul class="menu__list">
-         <li class="menu__item">
-           <a class="menu__link menu__link--active animation" href="#">
+       <ul class="menu header__list">
+         <li class="menu__item header__item">
+           <a class="menu__link header__link menu__link--active animation" href="#">
              Главная
            </a>
          </li>
-         <li class="menu__item">
-           <a class="menu__link animation" href="#">
+         <li class="menu__item header__item">
+           <a class="menu__link header__link animation" href="#">
              Блюда
            </a>
          </li>
-         <li class="menu__item">
-           <a class="menu__link animation" href="#">
+         <li class="menu__item header__item">
+           <a class="menu__link header__link animation" href="#">
              Контакты
            </a>
          </li>
@@ -47,31 +47,33 @@
      </nav>
    </div>
    <div class="mobile-menu">
-     <a class="logo" href="#">
-       <img class="logo__img" src="images/svg/logo.svg" width="200" height="39" alt="логотип">
-     </a>
-     <button class="burger-mobile" type="button">
-       <span class="sr-only">закрыть меню</span>
-     </button>
-     <ul class="menu__list">
-       <li class="menu__item">
-         <a class="menu__link menu__link--active animation" href="#">
+     <div class="mobile-menu__inner">
+       <a class="logo mobile-menu__logo" href="#">
+         <img class="logo__img mobile-menu__img" src="images/svg/logo.svg" width="200" height="39" alt="логотип">
+       </a>
+       <button class="burger-mobile" type="button">
+         <span class="sr-only">закрыть меню</span>
+       </button>
+     </div>
+     <ul class="menu mobile-menu__list">
+       <li class="menu__item mobile-menu__item">
+         <a class="menu__link mobile-menu__link menu__link--active animation" href="#">
            Главная
          </a>
        </li>
-       <li class="menu__item">
-         <a class="menu__link animation" href="#">
+       <li class="menu__item mobile-menu__item">
+         <a class="menu__link mobile-menu__link animation" href="#">
            Блюда
          </a>
        </li>
-       <li class="menu__item">
-         <a class="menu__link animation" href="#">
+       <li class="menu__item mobile-menu__item">
+         <a class="menu__link mobile-menu__link animation" href="#">
            Контакты
          </a>
        </li>
      </ul>
      <address class="address">
-       <ul class="contact">
+       <ul class="contact mobile-menu__contact">
          <li class="contact__data">
            <a class="contact__info contact__info--location animation" href="#">
              ул. Смирнова 2/3</a>
@@ -85,7 +87,7 @@
              support@sfood.com</a>
          </li>
        </ul>
-       <ul class="social">
+       <ul class="social mobile-menu__social">
          <li class="social__item">
            <a class="social__link" target="_blank" href="#">
              <svg class="social__facebook">

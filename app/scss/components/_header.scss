@@ -9,6 +9,26 @@
     padding: 25px 0;
   }
 
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    margin-right: 45px;
+
+    @include r($medium) {
+      display: none;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+
   .mobile-menu {
     @include r($medium) {
       position: absolute;
@@ -22,48 +42,50 @@
       overflow-y: auto;
       height: 100vh;
       width: 90%;
-      padding: 25px 0 0 50px;
       transform: translateX(-100%);
       transition: transform 0.5s;
 
+      &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 15px 25px 15px;
+        border-bottom: 1px solid #EEEFF3;
+      }
+
+      &__list {
+        display: block;
+        padding: 25px 15px 25px 15px;
+        border-bottom: 1px solid #EEEFF3;
+      }
+
+      &__contact {
+        padding: 15px 15px;
+      }
+
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
       &.active {
-        transform: translateX(-4%);
+        transform: translateX(-3%);
       }
 
-      .logo {
-        &__img {
-          width: 200px;
-          height: 39px;
-        }
+      &__img {
+        width: 200px;
+        height: 39px;
       }
 
-      .menu {
-        &__list {
-          display: block;
-          padding-top: 25px;
-          margin-bottom: 40px;
-          border-top: 1px solid #EEEFF3;
-        }
-
-        &__item {
-          &:not(:last-child) {
-            margin-bottom: 20px;
-          }
-        }
-      }
-
-      .contact {
-        &__data {
-          padding-left: 0;
-        }
+      &__social {
+        padding: 0 15px 15px 15px;
       }
 
       .burger-mobile {
         position: relative;
-        width: 30px;
-        top: -42px;
-        left: 80%;
-        height: 30px;
+        width: 44px;
+        height: 44px;
         z-index: 10;
 
         &:before,

@@ -4,6 +4,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
   }
 
   &__name {
@@ -20,14 +21,23 @@
     justify-content: space-between;
   }
 
-  &__title {
-    margin-bottom: 60px;
-  }
-
   &__filters {
     max-width: 270px;
     width: 100%;
     margin-right: 30px;
+  }
+
+  &__burgers {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 10px 0;
+  }
+
+  &__burger {
+    max-width: 210px;
+    width: 100%;
+    margin: 0 10px 10px 0;
+
   }
 }
 
@@ -43,8 +53,10 @@
     padding: 6px 0;
   }
 
-  &__link--active {
-    color: $orange;
+  &__link {
+    &--active {
+      color: $orange;
+    }
   }
 }
 
@@ -183,6 +195,10 @@
     border: 1px solid $orange;
     color: $orange;
     background: transparent;
+
+    .jq-selectbox__trigger-arrow {
+      filter: invert(49%) sepia(89%) saturate(1832%) hue-rotate(337deg) brightness(101%) contrast(101%);
+    }
   }
 
   &:focus {
@@ -205,9 +221,4 @@
   background-image: url('../../images/svg/slider-arrow.svg');
   @extend %bg;
   transform: rotate(-90deg);
-
-  &:hover {
-    filter: invert(49%) sepia(89%) saturate(1832%) hue-rotate(337deg) brightness(101%) contrast(101%);
-  }
-
 }
