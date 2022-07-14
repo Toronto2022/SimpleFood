@@ -1,4 +1,8 @@
 .footer {
+  @include r($small) {
+    padding-top: 40px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -24,11 +28,12 @@
   &__logo {
     display: block;
     margin-bottom: 30px;
+  }
 
+  &__img {
     @include r($small) {
-      max-width: 200px;
+      width: 200px;
       height: 39px;
-      margin-bottom: 30px;
     }
   }
 

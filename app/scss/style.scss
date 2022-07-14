@@ -11,7 +11,6 @@
 @import 'components/user-nav';
 @import 'components/page-index/hero';
 @import 'components/page-index/popular-categories';
-@import 'components/burgers';
 @import 'components/product-card';
 @import 'components/page-index/delivery';
 @import 'components/best-restaurants';
@@ -25,6 +24,7 @@
 @import 'components/contact';
 @import 'components/social';
 @import 'components/breadcrumbs';
-@import 'components/product-catalog';
+@import 'components/page-catalog/product-catalog';
 @import 'components/pagination';
-@import 'components/discounts';
+@import 'components/page-catalog/discounts';
+@import 'components/page-catalog/mobile-catalog';

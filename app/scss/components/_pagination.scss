@@ -17,6 +17,10 @@
       margin-right: 6px;
     }
 
+    &--active {
+      border: 1px solid #363853;
+    }
+
     &:hover {
       background-color: $orange;
       border: transparent;
@@ -44,10 +48,6 @@
           color: $darkBlue;
         }
       }
-
-      &--active {
-        border: 1px solid #363853;
-      }
     }
 
     &--dots {
@@ -63,6 +63,16 @@
     &--noactive {
       &:hover {
         background: #FAEDED;
+      }
+    }
+
+    @include r ($small) {
+      &:nth-of-type(3) {
+        display: none;
+      }
+
+      &:nth-of-type(5) {
+        display: none;
       }
     }
   }

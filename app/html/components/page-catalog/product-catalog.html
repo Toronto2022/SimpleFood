@@ -2,87 +2,93 @@
   <div class="container">
     <div class="product-catalog__content">
       <h1 class="product-catalog__title title">Каталог продуктов</h1>
-      <form class="product-catalog__form" action="#">
-        <select class="product-catalog__name">
-          <option value="По названию" name="По названию">По названию</option>
-          <option value="Рыба" name="meal">Рыба</option>
-          <option value="Мясо" name="meal">Мясо</option>
-          <option value="Бургер" name="meal">Бургер</option>
-        </select>
-        <select class="product-catalog__number">
-          <option value="">по 12</option>
-          <option value="">2</option>
-          <option value="">3</option>
-        </select>
-      </form>
+      <div class="product-catalog__box">
+        <button class="product-catalog__btn" type="button">
+          <span class="sr-only">открыть меню</span>
+          <svg>
+            <use xlink:href="images/sprite.svg#filter-btn"></use>
+          </svg>
+        </button>
+        <form class="product-catalog__form" action="#">
+          <select class="product-catalog__name">
+            <option value="По названию" name="По названию">По названию</option>
+            <option value="Рыба" name="meal">Рыба</option>
+            <option value="Мясо" name="meal">Мясо</option>
+            <option value="Бургер" name="meal">Бургер</option>
+          </select>
+          <select class="product-catalog__number">
+            <option value="">по 12</option>
+            <option value="">2</option>
+            <option value="">3</option>
+          </select>
+        </form>
+      </div>
     </div>
     <div class="product-catalog__inner">
       <div class="product-catalog__filters">
-        <div class="product-catalog-categories filter-style">
-          <h2 class="product-catalog-categories__title filter-title">Категории</h2>
-          <ul class="product-catalog-categories__list">
-            <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link product-catalog-categories__link--active animation"
-                href="#">Бургеры</a>
+        <div class="catalog-categories filter-style">
+          <h2 class="catalog-categories__title filter-title">Категории</h2>
+          <ul class="catalog-categories__list">
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link catalog-categories__link--active animation" href="#">Бургеры</a>
             </li>
-            <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link animation" href="#">Пицца</a>
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link animation" href="#">Пицца</a>
             </li>
-            <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link animation" href="#">Сендвичи</a>
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link animation" href="#">Сендвичи</a>
             </li>
-            <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link animation" href="#">Азиатская кухня</a>
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link animation" href="#">Азиатская кухня</a>
             </li>
-            <li class="product-catalog-categories__item">
-              <a class="product-catalog__link animation" href="#">Сеты</a>
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link animation" href="#">Сеты</a>
             </li>
-            <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link animation" href="#">Европейская кухня</a>
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link animation" href="#">Европейская кухня</a>
             </li>
-            <li class="product-catalog__item">
-              <a class="product-catalog__link animation" href="#">Напитки</a>
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link animation" href="#">Напитки</a>
             </li>
-            <li class="product-catalog-categories__item">
-              <a class="product-catalog-categories__link animation" href="#">Алкоголь</a>
+            <li class="catalog-categories__item">
+              <a class="catalog-categories__link animation" href="#">Алкоголь</a>
             </li>
           </ul>
         </div>
-        <div class="product-catalog-offers filter-style">
-          <h2 class="product-catalog-offers__title filter-title">Предложения</h2>
-          <form class="product-catalog-offers__form" action="#">
-            <label class="product-catalog-offers__label">
-              <div class="product-catalog-offers__box">
-                <input class="product-catalog-offers__input" type="checkbox">
-                <span class="product-catalog-offers__checkbox"></span>
+        <div class="catalog-offers filter-style">
+          <h2 class="catalog-offers__title filter-title">Предложения</h2>
+          <form class="catalog-offers__form" action="#">
+            <label class="catalog-offers__label">
+              <div class="catalog-offers__box">
+                <input class="catalog-offers__input" type="checkbox">
+                <span class="catalog-offers__checkbox"></span>
               </div>
               Со скидкой
             </label>
-            <label class="product-catalog-offers__label">
-              <div class="product-catalog-offers__box">
-                <input class="product-catalog-offers__input" type="checkbox">
-                <span class="product-catalog-offers__checkbox"></span>
+            <label class="catalog-offers__label">
+              <div class="catalog-offers__box">
+                <input class="catalog-offers__input" type="checkbox">
+                <span class="catalog-offers__checkbox"></span>
               </div>
               Новинка
             </label>
-            <label class="product-catalog-offers__label">
-              <div class="product-catalog-offers__box">
-                <input class="product-catalog-offers__input" type="checkbox">
-                <span class="product-catalog-offers__checkbox"></span>
+            <label class="catalog-offers__label">
+              <div class="catalog-offers__box">
+                <input class="catalog-offers__input" type="checkbox">
+                <span class="catalog-offers__checkbox"></span>
               </div>
               Хит
             </label>
           </form>
         </div>
-        <div class="product-catalog-price filter-style">
-          <h2 class="product-catalog-price__title filter-title">Цена</h2>
-          <form class="product-catalog-price__form" action="#">
-            <label class="product-catalog-price__label">
-              от <span class="product-catalog-price__from"></span>
-              <span>₽</span> до <span class="product-catalog-price__to"></span> <span>₽</span>
+        <div class="catalog-price filter-style">
+          <h2 class="catalog-price__title filter-title">Цена</h2>
+          <form class="catalog-price__form" action="#">
+            <label class="catalog-price__label">
+              от <span class="catalog-price__from"></span>
+              <span>₽</span> до <span class="catalog-price__to"></span> <span>₽</span>
             </label>
-            <input class="product-catalog-price__input" type="text" data-min="0" data-max="1000" data-from="200"
-              data-to="800">
+            <input class="catalog-price__input" type="text" data-min="0" data-max="1000" data-from="200" data-to="800">
           </form>
         </div>
       </div>
