@@ -89,6 +89,7 @@
 
     &--prev,
     &--next {
+
       svg {
         width: 11px;
         height: 18px;
@@ -97,8 +98,9 @@
     }
 
     &--next {
-      transform: rotate(180deg);
-      top: 8px;
+      svg {
+        transform: rotate(-180deg);
+      }
     }
   }
 }

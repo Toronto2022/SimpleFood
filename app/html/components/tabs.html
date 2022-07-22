@@ -1,0 +1,157 @@
+<section class="tabs">
+  <div class="container">
+    <div class="tabs__bottom">
+      <div class="tabs__subtitles">
+        <a class="tabs__link tabs__link--active" href="#tab-1">Описание
+        </a>
+        <a class="tabs__link" href="#tab-2">Характеристики
+        </a>
+        <a class="tabs__link" href="#tab-3">Отзывы
+          <span class="tabs__num">(2)</span>
+        </a>
+      </div>
+
+      <div class="tabs__content">
+        <div class="tabs__item tabs__item--active" id="tab-1">
+          <div class="tabs__text">
+            <p>
+              Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом,
+              горчицей,
+              луком и маринованными огурчиками.</p>
+            <p>
+              Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута</p>
+            <p>
+              Внешний вид товара может отличаться от изображений, представленных на сайте.
+            </p>
+          </div>
+        </div>
+        <div class="tabs__item" id="tab-2">
+          <ul class="tabs__property">
+            <li class="tabs__description">Диаметр:
+              <span>20 см</span>
+            </li>
+            <li class="tabs__description">Вес:
+              <span>300 гр</span>
+            </li>
+            <li class="tabs__description">Калорийность (на 100г):
+              <span>295 ккал</span>
+            </li>
+            <li class="tabs__description">Срок хранения:
+              <span>до 3 дней</span>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__item " id="tab-3">
+          <h2 class="tabs__title">Мнения наших клиентов</h2>
+          <div class="tabs__box">
+            <div class="tabs__inner">
+              <img class="tabs__img" src="images/client.jpg" alt="фото клиента">
+              <div class="tabs__contact">
+                <div class="tabs__name">Андрей</div>
+                <div class="tabs__date" datetime="10.06.2021">
+                  10.06.2021
+                </div>
+              </div>
+              <div class="star tabs__star" data-rateyo-rating="5"></div>
+            </div>
+            <div class="tabs__text-review">
+              <p>Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))
+              </p>
+            </div>
+          </div>
+          <div class="tabs__box">
+            <div class="tabs__inner">
+              <img class="tabs__img" src="images/client.jpg" alt="фото клиента">
+              <div class="tabs__contact">
+                <div class="tabs__name">Екатерина Белая
+                </div>
+                <div class="tabs__date" datetime="7.06.2021">
+                  7.06.2021
+                </div>
+              </div>
+              <div class="star tabs__star" data-rateyo-rating="4"></div>
+            </div>
+            <div class="tabs__text-review">
+              <p>этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это
+                отличный вариант, чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу
+              </p>
+            </div>
+          </div>
+          <form class="comments-form" action="#">
+            <h3 class="comments-form__title">Оставить отзыв</h3>
+            <div class="comments-form__rating">
+              <span class="comments-form__review"> Ваша оценка *
+              </span>
+              <label class="comments-form__label">
+                <input class="comments-form__input" type="radio">
+                <span class="comments-form__checkbox">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </span>
+              </label>
+              <label class="comments-form__label">
+                <input class="comments-form__input" type="radio">
+                <span class="comments-form__checkbox">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#star">
+                    </use>
+                  </svg>
+                </span>
+              </label>
+              <label class="comments-form__label">
+                <input class="comments-form__input" type="radio">
+                <span class="comments-form__checkbox">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </span>
+              </label>
+              <label class="comments-form__label">
+                <input class="comments-form__input" type="radio">
+                <span class="comments-form__checkbox">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </span>
+              </label>
+              <label class="comments-form__label">
+                <input class="comments-form__input" type="radio">
+                <span class="comments-form__checkbox">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#star"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+            <div class="comments-form__common" action="#">
+              <div class="comments-form__intro">
+                <label class="comments-form__lab" for="message">Ваш отзыв *</label>
+                <textarea class="comments-form__message comments-form__message--textarea" id="message"
+                  placeholder="Введите текст отзыва"></textarea>
+              </div>
+              <div class="comments-form__contact">
+                <div class="comments-form__info">
+                  <label class="comments-form__lab" for="name">Имя</label>
+                  <input class="comments-form__message" type="text" placeholder="Введите ваше имя">
+                </div>
+                <div class="comments-form__info">
+                  <label class="comments-form__lab" for="name">Email *</label>
+                  <input class="comments-form__message" type="email" placeholder="youremail@mail.com">
+                </div>
+              </div>
+            </div>
+            <label class="comments-form__box">
+              <div class="comments-form__check">
+                <input class="comments-form__filter" type="checkbox">
+                <span class="comments-form__change"></span>
+              </div>
+              Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+            </label>
+            <button class="comments-form__btn button">Оставить отзыв</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

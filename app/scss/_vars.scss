@@ -25,6 +25,14 @@ $light:#FFF2ED;
   border-radius: 3px;
 }
 
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 $xl:1200;
 $large:992;
 $medium:768;

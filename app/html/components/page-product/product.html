@@ -1,0 +1,60 @@
+<section class="product">
+  <section class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Главная </a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Чизбургер с листьями салата</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="container">
+    <div class="product__top">
+      <div id="myCarousel" class="carousel">
+        <div class="carousel__slide" data-src="images/burgers/big-burger.jpg" data-fancybox="gallery">
+          <img width="400" height="400" data-lazy-src="images/burgers/burger-big.jpg" alt="Чикен бургер">
+        </div>
+        <div class="carousel__slide" data-src="images/burgers/big-burger.jpg" data-fancybox="gallery">
+          <img width="400" height="400" data-lazy-src="images/burgers/burger-big.jpg" alt="Чикен бургер">
+        </div>
+        <div class="carousel__slide" data-src="images/burgers/big-burger.jpg" data-fancybox="gallery">
+          <img width="400" height="400" data-lazy-src="images/burgers/burger-big.jpg" alt="Чикен бургер">
+        </div>
+      </div>
+      <div class="product__content">
+        <h1 class="sr-only">добавить в корзину интересующий продукт</h1>
+        <h2 class="product__title title">Чизбургер с листьями салата</h2>
+        <div class="star product__star" data-rateyo-rating="4"></div>
+        <div class="product__price">
+          <span> 160<span>руб.</span></span>
+        </div>
+
+        <form class="product__form" action="#">
+          <div class="product__inner">
+            <label class="sr-only">введите количество</label>
+            <input class="product__input" type="number" value="1" min="1">
+            <button class="product__btn button">
+              <svg>
+                <use xlink:href="images/sprite.svg#cart"></use>
+              </svg>
+              Добавить в корзину</button>
+          </div>
+        </form>
+        <h2 class="product__subtitle">Доставка и оплата</h2>
+        <div class="product__text">
+          <p>Минимальная сумма заказа — 160 руб.</p>
+          <p>Время доставки заказа — 80-140 мин.</p>
+          <p>Оплата осуществляется только банковской картой.</p>
+          <p>Окончательная сумма заказа формируется после сбора товаров.</p>
+        </div>
+        <a class="product__link" href="#">Подробнее</a>
+      </div>
+    </div>
+  </div>
+</section>

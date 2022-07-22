@@ -47,72 +47,74 @@
      </nav>
    </div>
    <div class="mobile-menu">
-     <div class="mobile-menu__inner">
-       <a class="logo mobile-menu__logo" href="#">
-         <img class="logo__img mobile-menu__img" src="images/svg/logo.svg" width="200" height="39" alt="логотип">
-       </a>
-       <button class="burger-mobile" type="button">
-         <span class="sr-only">закрыть меню</span>
-       </button>
+     <div class="container">
+       <div class="mobile-menu__inner">
+         <a class="logo mobile-menu__logo" href="#">
+           <img class="logo__img mobile-menu__img" src="images/svg/logo.svg" width="200" height="39" alt="логотип">
+         </a>
+         <button class="burger-mobile" type="button">
+           <span class="sr-only">закрыть меню</span>
+         </button>
+       </div>
+       <ul class="menu mobile-menu__list">
+         <li class="menu__item mobile-menu__item">
+           <a class="menu__link mobile-menu__link menu__link--active animation" href="#">
+             Главная
+           </a>
+         </li>
+         <li class="menu__item mobile-menu__item">
+           <a class="menu__link mobile-menu__link animation" href="#">
+             Блюда
+           </a>
+         </li>
+         <li class="menu__item mobile-menu__item">
+           <a class="menu__link mobile-menu__link animation" href="#">
+             Контакты
+           </a>
+         </li>
+       </ul>
+       <address class="address">
+         <ul class="contact mobile-menu__contact">
+           <li class="contact__data">
+             <a class="contact__info contact__info--location animation" href="#">
+               ул. Смирнова 2/3</a>
+           </li>
+           <li class="contact__data">
+             <a class="contact__info contact__info--call animation" href="tel:+79068057043">
+               79068057043</a>
+           </li>
+           <li class="contact__data">
+             <a class="contact__info contact__info--message animation" href=" mailto:support@sfood.com">
+               support@sfood.com</a>
+           </li>
+         </ul>
+         <ul class="social mobile-menu__social">
+           <li class="social__item">
+             <a class="social__link" target="_blank" href="#">
+               <svg class="social__facebook">
+                 <use xlink:href="images/sprite.svg#facebook"></use>
+               </svg>
+               <span class="sr-only">написать в фейсбук</span>
+             </a>
+           </li>
+           <li class="social__item">
+             <a class="social__link" target="_blank" href="#">
+               <svg class="social__twitter">
+                 <use xlink:href="images/sprite.svg#twitter"></use>
+               </svg>
+               <span class="sr-only">мы в твиттер</span>
+             </a>
+           </li>
+           <li class="social__item">
+             <a class="social__link" target="_blank" href="#">
+               <svg class="social__instagram">
+                 <use xlink:href="images/sprite.svg#instagram"></use>
+               </svg>
+               <span class="sr-only">написать в инстаграм</span>
+             </a>
+           </li>
+         </ul>
+       </address>
      </div>
-     <ul class="menu mobile-menu__list">
-       <li class="menu__item mobile-menu__item">
-         <a class="menu__link mobile-menu__link menu__link--active animation" href="#">
-           Главная
-         </a>
-       </li>
-       <li class="menu__item mobile-menu__item">
-         <a class="menu__link mobile-menu__link animation" href="#">
-           Блюда
-         </a>
-       </li>
-       <li class="menu__item mobile-menu__item">
-         <a class="menu__link mobile-menu__link animation" href="#">
-           Контакты
-         </a>
-       </li>
-     </ul>
-     <address class="address">
-       <ul class="contact mobile-menu__contact">
-         <li class="contact__data">
-           <a class="contact__info contact__info--location animation" href="#">
-             ул. Смирнова 2/3</a>
-         </li>
-         <li class="contact__data">
-           <a class="contact__info contact__info--call animation" href="tel:+79068057043">
-             79068057043</a>
-         </li>
-         <li class="contact__data">
-           <a class="contact__info contact__info--message animation" href=" mailto:support@sfood.com">
-             support@sfood.com</a>
-         </li>
-       </ul>
-       <ul class="social mobile-menu__social">
-         <li class="social__item">
-           <a class="social__link" target="_blank" href="#">
-             <svg class="social__facebook">
-               <use xlink:href="images/sprite.svg#facebook"></use>
-             </svg>
-             <span class="sr-only">написать в фейсбук</span>
-           </a>
-         </li>
-         <li class="social__item">
-           <a class="social__link" target="_blank" href="#">
-             <svg class="social__twitter">
-               <use xlink:href="images/sprite.svg#twitter"></use>
-             </svg>
-             <span class="sr-only">мы в твиттер</span>
-           </a>
-         </li>
-         <li class="social__item">
-           <a class="social__link" target="_blank" href="#">
-             <svg class="social__instagram">
-               <use xlink:href="images/sprite.svg#instagram"></use>
-             </svg>
-             <span class="sr-only">написать в инстаграм</span>
-           </a>
-         </li>
-       </ul>
-     </address>
    </div>
  </header>

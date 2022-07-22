@@ -10,7 +10,7 @@
     justify-content: space-between;
     margin-bottom: 60px;
 
-    @include r($small) {
+    @include r($medium) {
       display: block;
       margin-bottom: 30px;
     }
@@ -30,6 +30,7 @@
     display: none;
     width: 47px;
     height: 47px;
+    padding: 7px;
     @extend %bg-cat;
     margin-right: 10px;
 
@@ -39,9 +40,15 @@
       fill: $orange;
     }
 
-    @include r ($small) {
+    @include r ($medium) {
       display: block;
+      margin-right: 20px;
     }
+  }
+
+  &__name,
+  &__number {
+    z-index: 0;
   }
 
   &__inner {
@@ -108,47 +115,6 @@
       width: 45%;
       margin: 0 5px 10px 0;
     }
-  }
-
-  &__name,
-  &__number {
-    z-index: -1;
-  }
-
-  .irs--flat .irs-line {
-    top: 25px;
-    height: 2px;
-    background-color: $gray;
-    border-radius: 0;
-  }
-
-  .irs--flat .irs-handle {
-    top: 18px;
-    width: 18px;
-    height: 18px;
-    background-color: $orange;
-    border-radius: 50%;
-  }
-
-  .irs--flat .irs-handle>i:first-child {
-    display: none;
-  }
-
-  .irs--flat .irs-bar {
-    top: 25px;
-    height: 2px;
-    background-color: $orange;
-  }
-
-  .irs-from,
-  .irs-to,
-  .irs-single {
-    display: none;
-  }
-
-  .irs--flat .irs-min,
-  .irs--flat .irs-max {
-    display: none;
   }
 
   .jq-selectbox__select {
@@ -236,6 +202,10 @@
     &:hover {
       color: $orange;
     }
+
+    &:focus {
+      color: $dark;
+    }
   }
 
   &__box {
@@ -243,11 +213,7 @@
   }
 
   &__input {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    position: absolute;
+    @extend %checkbox-hidden;
 
     &:checked+.catalog-offers__checkbox {
       background-image: url('../../images/svg/checked.svg');
@@ -303,5 +269,41 @@
     &:focus {
       border: 1px solid $orange;
     }
+  }
+
+  .irs--flat .irs-line {
+    top: 25px;
+    height: 2px;
+    background-color: $gray;
+    border-radius: 0;
+  }
+
+  .irs--flat .irs-handle {
+    top: 18px;
+    width: 18px;
+    height: 18px;
+    background-color: $orange;
+    border-radius: 50%;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
+
+  .irs--flat .irs-bar {
+    top: 25px;
+    height: 2px;
+    background-color: $orange;
+  }
+
+  .irs-from,
+  .irs-to,
+  .irs-single {
+    display: none;
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
   }
 }
